@@ -1,130 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent">
 
-    <ImageView
-        android:id="@+id/ic_store"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textInputLayout"
-        app:srcCompat="@drawable/ic_store"
-        android:importantForAccessibility="no"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/howWasServiceView"
-        app:layout_constraintStart_toEndOf="@id/ic_store"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/costOfServiceMaterial"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:hint="@string/costOfService"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/service_bell"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/howWasServiceView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/howWasServiceView"
-        app:srcCompat="@drawable/ic_service" />
-
-
-    <TextView
-        android:id="@+id/howWasServiceView"
-        style="@style/Widget.TipTime.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="16dp"
-        android:text="@string/howWasService"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/tipRadioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
-        app:layout_constraintStart_toStartOf="@+id/howWasServiceView"
-        app:layout_constraintTop_toBottomOf="@+id/howWasServiceView"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.appcompat.widget.AppCompatRadioButton
-            style="@style/Widget.TipTime.CompoundButton.RadioButton"
-            android:id="@+id/amazingTip"
+        <ImageView
+            android:id="@+id/ic_store"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/amazingTip" />
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout"
+            app:srcCompat="@drawable/ic_store"
+            android:importantForAccessibility="no" />
 
-        <androidx.appcompat.widget.AppCompatRadioButton
-            style="@style/Widget.TipTime.CompoundButton.RadioButton"
-            android:id="@+id/goodTip"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/goodTip" />
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/howWasServiceView"
+            app:layout_constraintStart_toEndOf="@id/ic_store"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatRadioButton
-            style="@style/Widget.TipTime.CompoundButton.RadioButton"
-            android:id="@+id/okTip"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/costOfServiceMaterial"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/costOfService"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/service_bell"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/okTip" />
-
-    </RadioGroup>
-
-
-    <ImageView
-        android:id="@+id/roundUpImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toTopOf="@id/roundUpSwitch"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/roundUpSwitch"
-        app:srcCompat="@drawable/ic_round_up" />
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/howWasServiceView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/howWasServiceView"
+            app:srcCompat="@drawable/ic_service" />
 
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/roundUpSwitch"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/roundUp"
-        style="@style/Widget.TipTime.CompoundButton.Switch"
-        app:layout_constraintBottom_toTopOf="@id/calculateButton"
-        app:layout_constraintTop_toBottomOf="@id/tipRadioGroup"
-        app:layout_constraintStart_toStartOf="@id/tipRadioGroup"/>
+        <TextView
+            android:id="@+id/howWasServiceView"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/howWasService"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
-    <Button
-        android:id="@+id/calculateButton"
-        app:layout_constraintStart_toStartOf="@id/roundUpSwitch"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/calculate"
-        app:layout_constraintTop_toBottomOf="@+id/roundUpSwitch" />
-    <TextView
-        android:id="@+id/tipAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tipAmount"
-        app:layout_constraintEnd_toEndOf="@id/calculateButton"
-        app:layout_constraintTop_toBottomOf="@id/calculateButton"
-        tools:text="Tip Amount: $10" />
+        <RadioGroup
+            android:id="@+id/tipRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+            app:layout_constraintStart_toStartOf="@+id/howWasServiceView"
+            app:layout_constraintTop_toBottomOf="@+id/howWasServiceView"
+            app:layout_constraintVertical_bias="0.0">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                style="@style/Widget.TipTime.CompoundButton.RadioButton"
+                android:id="@+id/amazingTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amazingTip" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                style="@style/Widget.TipTime.CompoundButton.RadioButton"
+                android:id="@+id/goodTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goodTip" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                style="@style/Widget.TipTime.CompoundButton.RadioButton"
+                android:id="@+id/okTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/okTip" />
+
+        </RadioGroup>
+
+
+        <ImageView
+            android:id="@+id/roundUpImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/roundUpSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/roundUpSwitch"
+            app:srcCompat="@drawable/ic_round_up" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/roundUpSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/roundUp"
+            style="@style/Widget.TipTime.CompoundButton.Switch"
+            app:layout_constraintEnd_toEndOf="@id/calculateButton"
+            app:layout_constraintBottom_toTopOf="@id/calculateButton"
+            app:layout_constraintTop_toBottomOf="@id/tipRadioGroup"
+            app:layout_constraintStart_toStartOf="@id/tipRadioGroup" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            app:layout_constraintStart_toStartOf="@id/roundUpSwitch"
+            android:layout_width="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"
+            app:layout_constraintTop_toBottomOf="@+id/roundUpSwitch"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tipAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tipAmount"
+            style="@style/Widget.TipTime.TextView"
+            app:layout_constraintEnd_toEndOf="@id/calculateButton"
+            app:layout_constraintTop_toBottomOf="@id/calculateButton"
+            tools:text="Tip Amount: $10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

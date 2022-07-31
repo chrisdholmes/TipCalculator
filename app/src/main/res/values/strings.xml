@@ -9,6 +9,7 @@
     <string name="tipAmount">Tip Amount: %s</string>
     <string name="howWasService">How was the Service?</string>
     <string name="enterPrice">Enter a price to calculate Tip :D</string>
+    <string name="startTipAmount">$0.00</string>
 
 
 
